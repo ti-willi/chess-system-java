@@ -42,7 +42,7 @@ public class UI {
 	
 	public static ChessPosition readChessPosition(Scanner sc) {
 		try {
-			String s = sc.nextLine();
+			String s = sc.nextLine().toLowerCase();
 			char column = s.charAt(0);
 			int row = Integer.parseInt(s.substring(1));
 			return new ChessPosition(column, row);
@@ -59,7 +59,8 @@ public class UI {
 		System.out.println();
 		System.out.println("Turn: " + chessMatch.getTurn());
 		if (!chessMatch.getCheckMate()) {
-			System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());
+			String currentPlayerColor = chessMatch.getCurrentPlayer() == Color.WHITE ? ANSI_WHITE : ANSI_YELLOW;
+			System.out.println("Waiting player: " + currentPlayerColor + chessMatch.getCurrentPlayer() + ANSI_RESET);
 			if (chessMatch.getCheck()) {
 				System.out.println("CHECK!");
 			}
@@ -73,24 +74,24 @@ public class UI {
 	
 	public static void printBoard(ChessPiece[][] pieces) {
 		for (int i = 0; i < pieces.length; i++) {
-			System.out.print((8 - i) + " ");
+			System.out.print(ANSI_CYAN + (8 - i) + " " + ANSI_RESET);
 			for (int j = 0; j < pieces.length; j++) {
 				printPiece(pieces[i][j], false);
 			}
 			System.out.println();
 		}
-		System.out.println("  a b c d e f g h");
+		System.out.println(ANSI_CYAN + "  a b c d e f g h" + ANSI_RESET);
 	}
 
 	public static void printBoard(ChessPiece[][] pieces, boolean[][] possibleMoves) {
 		for (int i = 0; i < pieces.length; i++) {
-			System.out.print((8 - i) + " ");
+			System.out.print(ANSI_CYAN + (8 - i) + " " + ANSI_RESET);
 			for (int j = 0; j < pieces.length; j++) {
 				printPiece(pieces[i][j], possibleMoves[i][j]);
 			}
 			System.out.println();
 		}
-		System.out.println("  a b c d e f g h");
+		System.out.println(ANSI_CYAN + "  a b c d e f g h" + ANSI_RESET);
 	}
 
 	private static void printPiece(ChessPiece piece, boolean background) {
@@ -115,12 +116,12 @@ public class UI {
 		List<ChessPiece> white = captured.stream().filter(x -> x.getColor() == Color.WHITE).collect(Collectors.toList());
 		List<ChessPiece> black = captured.stream().filter(x -> x.getColor() == Color.BLACK).collect(Collectors.toList());
 		System.out.println("Captured pieces:");
-		System.out.print("White: ");
 		System.out.print(ANSI_WHITE);
+		System.out.print("White: ");
 		System.out.println(Arrays.toString(white.toArray()));
 		System.out.print(ANSI_RESET);
-		System.out.print("Black: ");
 		System.out.print(ANSI_YELLOW);
+		System.out.print("Black: ");
 		System.out.println(Arrays.toString(black.toArray()));
 		System.out.print(ANSI_RESET);
 	}
