@@ -1,7 +1,7 @@
 # Chess System
 
 >## Sobre o projeto
-A aplicação consiste em um jogo de xadrez, podendo ser executado através do terminal.
+A aplicação consiste em um sistema de jogo de xadrez na linguagem Java, podendo ser executado através do terminal.
 O objetivo do projeto foi para se aprofundar em POO, aplicando boas práticas.
 
 >## Como jogar
