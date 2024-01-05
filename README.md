@@ -6,7 +6,7 @@ O objetivo do projeto foi para se aprofundar em POO, aplicando boas práticas.
 
 >## Como jogar
 
- Cada peça é representada por uma letra, correspondendo a inicial do nome da peça (em inglês). Abaixo do tabuleiro, temos as peças capturadas de cada jogador, o turno em que jogo está e qual o é o jogador a jogar a próxima peça
+ Cada peça é representada por uma letra, correspondendo a inicial do nome da peça (em inglês). Abaixo do tabuleiro, temos as peças capturadas de cada jogador, o turno em que jogo está e qual o jogador que deve jogar a próxima peça.
 
  - Peças: `Pawn (P), Rook (R), Knight (N), Bishop (B), Queen (Q) e King (K)`
 
