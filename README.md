@@ -28,11 +28,11 @@ O objetivo do projeto foi para se aprofundar em POO e lógica de programação, 
 
 >## Como executar
 
-`Pré requsitos: Java 17 / Intelij ou Eclipse`
+`Pré requsitos: Java 17`
 
 - Clonar o repositório
 ```
  git@github.com:ti-willi/chess-system-java.git
 ```
 
-- Abra em sua IDE de preferência(Intelij ou Eclipse) e execute o projeto
+- Abra em sua IDE e execute o projeto
