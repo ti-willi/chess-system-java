@@ -28,7 +28,7 @@ O objetivo do projeto foi para se aprofundar em POO e lógica de programação, 
 
 >## Como executar
 
-`Pré requsitos: Java 17`
+`Pré requsitos: Java 17+`
 
 - Clonar o repositório
 ```
